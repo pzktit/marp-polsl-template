@@ -89,7 +89,7 @@ Przedstawiony szablon stara się być zgodny z zaleceniami ["Systemu Identyfikac
 
 - Wyedytuj plik `slides/Slides.md`. **Nie zmieniaj jego nazwy**
 - Rozszerzenie oferuje opcję podglądu wyników oraz eksportu do HTML i PDF.
--  Po wypchnięciu aktualnej treści prezentacji do GH, automatycznie uruchamne jest budowanie `GitHub Pages`. Jeżeli nie chcesz publikować wyników swojej pracy to zmień repo na prywatne albo usuń katalog `.git`.
+-  Po wypchnięciu aktualnej treści prezentacji do GH, automatycznie uruchamia się budowanie `GitHub Pages` (budowanie musi być skonfigurowane na `GitHub Actions`). Jeżeli nie chcesz publikować wyników swojej pracy to zmień repo na prywatne albo usuń katalog `.git`.
 
 </div>
 </div>
@@ -149,7 +149,7 @@ Skład prezentacji jest kontrolowany przez plik `slides/themes/polsl.css`.
 
 ### Tekst
 
-Skład slajdu może jedno i dwukolumnowy. Więcej kolumn łatwo uzyskać, wprowadząjąc nowe klasy. Jednak celem tego szablonu jest zapewnienie maksymalnej prostoty edycji. 
+Skład slajdu może jedno i dwukolumnowy. Więcej kolumn łatwo uzyskać, wprowadzając nowe klasy. Jednak celem tego szablonu jest zapewnienie maksymalnej prostoty edycji.
 
 <div class="columns">
 <div>
@@ -194,7 +194,7 @@ Jak widać efekt jest całkiem zadowalający. Pionowe wyrównanie tekstu najłat
 
 ### Kod komputerowy
 
-Obowiązują reguły dokładnie takie same dla języka Markdown. Dla większości języków programowania wspierane jest kolorowanie składni. Kolory przypisane do elementów logicznych są kontrolowane w pliku CSS stylu. Aby umieścić kod języka `Python` należy zastosować następującą konstrukcję
+Obowiązują reguły dokładnie takie same jak dla języka Markdown. Dla większości języków programowania wspierane jest kolorowanie składni. Kolory przypisane do elementów logicznych są kontrolowane w pliku CSS stylu. Aby umieścić kod języka `Python` należy zastosować następującą konstrukcję
 
 
 <div class="columns">
@@ -251,7 +251,7 @@ print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
 
 - Szczegółowy opis składni umożliwiającej włączenie grafiki opisano w dokumentacji [https://marpit.marp.app/image-syntax](https://marpit.marp.app/image-syntax).
 - należy zwrócić uwagę, że proponowany styl zawiera już obraz tła, zatem korzystanie z opcji `bg` może prowadzić do niepożądanych skutków.
-- Pliki zawierające grafikę nie muszą być zapisane na lokalnym dysku~-- można się do nich odwołuwać poprzez `url`.
+- Pliki zawierające grafikę nie muszą być zapisane na lokalnym dysku~-- można się do nich odwoływać poprzez `url`.
 
 ```md
 ![w:400](https://picsum.photos/720?image=29)
@@ -288,7 +288,7 @@ Tabela 1. Przykład podpisu pod rysunkiem lub tabelą.
 
 ---
 
-##### Podczas eksportu do pliku HTML grafika z podkatalogu `img` nie jest eksportowana. Musisz ją przenieść razem z plikiem HTML. Podobny problem ma miejsce podczas prezentacji na systemie bez dostępu do sieci!
+##### Podczas eksportu do pliku HTML lokalne pliki graficzne nie są kopiowane. Należy je przenieść osobno i umieścić w odpowiednim podkatalogu względem pliku prezentacji. Podobny problem ma miejsce podczas prezentacji na systemie bez dostępu do sieci!
 
 # Powodzenia!
 
