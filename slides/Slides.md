@@ -169,6 +169,7 @@ To jest zwykły tekst po prostu wystarczy pisać.
 3. **trzy**
 
 </div>
+</div>
 
 ---
 
@@ -178,7 +179,7 @@ To jest zwykły tekst po prostu wystarczy pisać.
 
 ### Wyrażenia matematyczne
 
-W tekście można umieszczać wyrażenia matematyczne zgodne ze składną _TeX_ (a dokładniej _MathJax_). Wrażenia mogą być wstawione $2\pi r = \sqrt{3 x^3}$ oraz wystawione 
+W tekście można umieszczać wyrażenia matematyczne zgodnie ze składnią _TeX_ (a dokładniej _MathJax_). Wrażenia mogą być wstawione $2\pi r = \sqrt{3 x^3}$ oraz wystawione 
 $$  y=\int\limits_{0}^{\infty} e^{-x^2} dx $$
 Jak widać efekt jest całkiem zadowalający. Pionowe wyrównanie tekstu najłatwiej osiągnąć wstawiając puste nagłówki w pożądanych miejscach.
 
