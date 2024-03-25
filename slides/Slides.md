@@ -291,5 +291,7 @@ Tabela 1. Przykład podpisu pod rysunkiem lub tabelą.
 
 ##### Podczas eksportu do pliku HTML lokalne pliki graficzne nie są kopiowane. Należy je przenieść osobno i umieścić w odpowiednim podkatalogu względem pliku prezentacji. Podobny problem ma miejsce podczas prezentacji na systemie bez dostępu do sieci!
 
+#
+
 # Powodzenia!
 
