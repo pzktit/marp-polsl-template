@@ -9,7 +9,7 @@ transition: fade
 ---
 <!-- _class: titlepage -->
 <!-- _backgroundImage: url("img/title-page-background.png") -->
-
+<!-- _paginate: flase -->
 ##
 
 ##
@@ -85,7 +85,7 @@ Przedstawiony szablon stara się być zgodny z zaleceniami ["Systemu Identyfikac
 </div><div>
 
 - Wyedytuj plik `slides/Slides.md`. **Nie zmieniaj jego nazwy**
-- Rozszerzenie oferuje opcję podglądu wyników oraz eksportu do HTML i PDF.
+- Rozszerzenie `Marp for VS Code` oferuje opcję podglądu wyników oraz eksportu do HTML i PDF.
 -  Po wypchnięciu aktualnej treści prezentacji do GH, automatycznie uruchamia się budowanie `GitHub Pages` (budowanie musi być skonfigurowane na `GitHub Actions`). Jeżeli nie chcesz publikować wyników swojej pracy to zmień repo na prywatne albo usuń katalog `.git`.
 
 </div>
@@ -126,9 +126,10 @@ blah blah blah
 
 </div><div>
 
-- Pierwszy slajd jest specjalny i zawiera preambułę. Dostępne parametry preambuły można sprawdzić w VS Code skótem `Ctrl+Spacja`.
+- Pierwszy slajd jest specjalny i zawiera preambułę. Dostępne parametry preambuły można sprawdzić w VS Code skrótem `Ctrl+Spacja`.
 - Wokół sekwencji `---` oddzielającej slajdy należy umieścić puste linie.
-- W pliku VS Code należy poprawnie ustawić opcję umożliwiającą stosowanie wstawek HTML oarz ścieżkę do stylu (`.vscode/settings.json`)
+- W pliku VS Code należy poprawnie ustawić opcję umożliwiającą stosowanie wstawek HTML oraz ścieżkę do stylu (`.vscode/settings.json`)
+  
 ```json
 "markdown.marp.enableHtml": true,
 "markdown.marp.themes": [
@@ -253,7 +254,7 @@ sum = num1 + num2
 
 # Display the sum
 print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
-#``` usuń znak komentarza
+#``` znaku komentarza nie powinno tu być
 ```
 
 </div>
