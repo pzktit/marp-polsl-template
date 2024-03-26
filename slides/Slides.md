@@ -347,5 +347,7 @@ Możliwość podziału slajdu na dwie kolumny umożliwia kontener `columns`. Jeg
 
 ##### Podczas eksportu do pliku HTML lokalne pliki graficzne nie są kopiowane. Należy je przenieść osobno i umieścić w odpowiednim podkatalogu względem pliku prezentacji. Podobny problem ma miejsce podczas prezentacji na systemie bez dostępu do sieci!
 
+#
+
 # Powodzenia!
 
