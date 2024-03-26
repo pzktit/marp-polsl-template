@@ -5,7 +5,7 @@ theme: polsl
 size: 16:9
 paginate: true
 backgroundImage: url("img/normal-page-background.png") 
-transition: fade 1s
+transition: fade
 ---
 <!-- _class: titlepage -->
 <!-- _backgroundImage: url("img/title-page-background.png") -->
@@ -33,8 +33,6 @@ transition: fade 1s
 
 ###
 
-###
-
 
 <div class="columns">
 <div>
@@ -43,6 +41,7 @@ transition: fade 1s
 - rozszerzenie wspierające Marp,
 - rozszerzenie LTeX może być użyteczne,
 - i już.
+- **nie musisz instalować VS Code. Skorzystaj z [vscode.dev](https://vscode.dev)!**
 
 #### Poradniki
 
@@ -51,9 +50,9 @@ transition: fade 1s
 1. [Seven Tips For Getting The Most Out Of Marp](https://www.hashbangcode.com/article/seven-tips-getting-most-out-marp)
 1. [Marpit Markdown](https://marpit.marp.app/markdown)
 
-##### Kontent przygotowuje się w języku Markdown.
+##### Kontent przygotowuje się w języku Markdown (plus małe wstawki HTML).
 
-</div><div>
+</div><div align="center" >
 
 ![w:400](img/marp-for-vscode.png)
 
@@ -69,11 +68,9 @@ transition: fade 1s
 
 ## Szablon
 
-###
-
-###
-
 Przedstawiony szablon stara się być zgodny z zaleceniami ["Systemu Identyfikacji Wizualnej Politechniki Śląskiej"](https://www.polsl.pl/siwps/).
+
+##### Najlepszym sposobem zapoznania się z procesm składu jest eksperyment z szablonem
 
 #### Kroki niezbędne do instalacji
 
@@ -81,8 +78,8 @@ Przedstawiony szablon stara się być zgodny z zaleceniami ["Systemu Identyfikac
 <div>
 
 - Wykonaj fork tego repozytorium ([https://github.com/pzktit/marp-polsl-template](https://github.com/pzktit/marp-polsl-template)) na swoje konto GitHub. 
-- Sklonuj repozytorium do lokalnego folderu.
-- Uruchom VS Code. Jeżeli nie chcesz instalować zalecanego rozszerzenia otwórz DevContainer.
+- Otwórz [https://vscode.dev](https://vscode.dev) lub ...
+- Sklonuj repozytorium do lokalnego folderu i uruchom w nim VS Code. Jeżeli nie chcesz instalować zalecanego rozszerzenia otwórz DevContainer.
 
 
 </div><div>
@@ -99,12 +96,55 @@ Przedstawiony szablon stara się być zgodny z zaleceniami ["Systemu Identyfikac
 
 ###
 
+---
+
+## Plik wejściowy
+
+Plik wejściowy to niemal "zwykły" Markdown. Jedyna różnica polega na wprowadzeniu znaku podziału slajdów w postaci trzech znaków minus (dash): `---`. 
+
+<div class="columns">
+<div>
+
+```
+---
+marp: true
+theme: polsl
+size: 16:9
+---
+
+## Slajd 1
+
+blah blah blah
+
+---
+
+## Slajd 2
+
+blah blah blah
+
+```
+
+</div><div>
+
+- Pierwszy slajd jest specjalny i zawiera preambułę. Dostępne parametry preambuły można sprawdzić w VS Code skótem `Ctrl+Spacja`.
+- Wokół sekwencji `---` oddzielającej slajdy należy umieścić puste linie.
+- W pliku VS Code należy poprawnie ustawić opcję umożliwiającą stosowanie wstawek HTML oarz ścieżkę do stylu (`.vscode/settings.json`)
+```json
+"markdown.marp.enableHtml": true,
+"markdown.marp.themes": [
+    "./slides/themes/polsl.css"
+    ],
+"markdown.marp.exportType": "html",
+```
+
+</div>
+</div>
 
 ---
 
 ## Struktura dokumentu
 
-###
+##### Sposób składu znaczników podziału na sekcje definiuje styl.
 
 
 ### Podział na sekcje
@@ -243,25 +283,26 @@ print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
 
 ## Zawartość slajdu
 
+###
+
 ### Slajd może również zawierać grafikę
 
 
-
-<div class="columns-centered">
+<div class="columns">
 <div>
 
 - Szczegółowy opis składni umożliwiającej włączenie grafiki opisano w dokumentacji [https://marpit.marp.app/image-syntax](https://marpit.marp.app/image-syntax).
 - należy zwrócić uwagę, że proponowany styl zawiera już obraz tła, zatem korzystanie z opcji `bg` może prowadzić do niepożądanych skutków.
-- Pliki zawierające grafikę nie muszą być zapisane na lokalnym dysku~-- można się do nich odwoływać poprzez `url`.
+- Pliki zawierające grafikę nie muszą być zapisane na lokalnym dysku - można się do nich odwoływać poprzez `url`.
 
 ```md
-![w:400](https://picsum.photos/720?image=29)
+![w:300](https://picsum.photos/720?image=29)
 ```
 
 </div>
-<div>
+<div style="justify-self: center; align-self: center">
 
-![w:400](https://picsum.photos/720?image=29)
+![w:300](https://picsum.photos/720?image=29)
 
 </div>
 </div>
@@ -270,6 +311,7 @@ print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
 ---
 
 ## Zawartość slajdu
+
 
 ### Tabele
 
@@ -282,11 +324,25 @@ print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
 | A2       | B2       | C2       |    D2    |
 | A3       | B3       | C3       |    D3    |
 | A3       | B3       | C3       |    $y=\frac{2}{\pi}$    |
-<figcaption align="center" style="font-size: 80%">
+<figcaption style="font-size: 80%; text-align: center">
 Tabela 1. Przykład podpisu pod rysunkiem lub tabelą.
 </figcaption>
 
+####
+---
 
+## Skład w wielu kolumnach
+
+###
+###
+###
+
+Możliwość podziału slajdu na dwie kolumny umożliwia kontener `columns`. Jego użycie zilustrowano we wzorcu, więc można go zacząć stosować bez zrozumienia "na wzór i podobieństwo". Kontener ten jest zrealizowany jest jako wstawka HTML elementu `grid`. Szczegółowy opis opcji jakie można stosować do wyrównania elementów w poziomie i pionie (przykłady użycia we wzorcu) przedstawiono w dokumencie [Chris House "A Complete Guide to CSS Grid"](https://css-tricks.com/snippets/css/complete-guide-grid/). Na podstawie zamieszczonego tam opisu bardzo łatwo stworzyć wzorce podziału obszaru slajdu na więcej logicznych elementów. Ale to już bardziej złożone zagadnienie.
+
+###
+###
+###
+###
 ---
 
 ##### Podczas eksportu do pliku HTML lokalne pliki graficzne nie są kopiowane. Należy je przenieść osobno i umieścić w odpowiednim podkatalogu względem pliku prezentacji. Podobny problem ma miejsce podczas prezentacji na systemie bez dostępu do sieci!
