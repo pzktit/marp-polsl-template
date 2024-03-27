@@ -15,5 +15,10 @@
 			"./slides/themes/polsl.css"
 		],
 		"markdown.marp.exportType": "html"
+	},
+	"extensions": {
+		"recommendations": [
+			"marp-team.marp-vscode"
+		]
 	}
 }

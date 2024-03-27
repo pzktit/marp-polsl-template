@@ -6,10 +6,23 @@ size: 16:9
 paginate: true
 backgroundImage: url("img/normal-page-background.png") 
 transition: fade
+footer: "**Marp + VS Code**"
+
 ---
+<style>
+footer {
+  all: unset;
+  margin: 0;
+  position: absolute;
+  left: 550px; 
+  bottom: 21px;
+  color: var(--emph-color) ;
+}
+</style>
 <!-- _class: titlepage -->
 <!-- _backgroundImage: url("img/title-page-background.png") -->
-<!-- _paginate: flase -->
+<!-- _paginate: false -->
+<!-- _footer: "" -->
 ##
 
 ##
@@ -29,6 +42,7 @@ transition: fade
 ### 24.03.2024 
 
 ---
+
 ## Niezbędne oprogramowanie
 
 ###
@@ -128,7 +142,7 @@ blah blah blah
 
 - Pierwszy slajd jest specjalny i zawiera preambułę. Dostępne parametry preambuły można sprawdzić w VS Code skrótem `Ctrl+Spacja`.
 - Wokół sekwencji `---` oddzielającej slajdy należy umieścić puste linie.
-- W pliku VS Code należy poprawnie ustawić opcję umożliwiającą stosowanie wstawek HTML oraz ścieżkę do stylu (`.vscode/settings.json`)
+- W pliku konfiguracyjnym (`.vscode/settings.json`) VS Code należy poprawnie ustawić opcję umożliwiającą stosowanie wstawek HTML oraz ścieżkę do stylu (jeżeli klonowałeś repozytorium, to już to jest zrobione)
   
 ```json
 "markdown.marp.enableHtml": true,
@@ -222,6 +236,9 @@ To jest zwykły tekst po prostu wystarczy pisać.
 
 W tekście można umieszczać wyrażenia matematyczne zgodnie ze składnią _TeX_ (a dokładniej _MathJax_). Wrażenia mogą być wstawione $2\pi r = \sqrt{3 x^3}$ oraz wystawione 
 $$  y=\int\limits_{0}^{\infty} e^{-x^2} dx $$
+
+$$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi\qquad\qquad I_{xx}=\int\int_Ry^2f(x,y)\cdot{}dydx $$
+
 Jak widać efekt jest całkiem zadowalający. Pionowe wyrównanie tekstu najłatwiej osiągnąć wstawiając puste nagłówki w pożądanych miejscach.
 
 ###
@@ -338,7 +355,7 @@ Tabela 1. Przykład podpisu pod rysunkiem lub tabelą.
 ###
 ###
 
-Możliwość podziału slajdu na dwie kolumny umożliwia kontener `columns`. Jego użycie zilustrowano we wzorcu, więc można go zacząć stosować bez zrozumienia "na wzór i podobieństwo". Kontener ten jest zrealizowany jest jako wstawka HTML elementu `grid`. Szczegółowy opis opcji jakie można stosować do wyrównania elementów w poziomie i pionie (przykłady użycia we wzorcu) przedstawiono w dokumencie [Chris House "A Complete Guide to CSS Grid"](https://css-tricks.com/snippets/css/complete-guide-grid/). Na podstawie zamieszczonego tam opisu bardzo łatwo stworzyć wzorce podziału obszaru slajdu na więcej logicznych elementów. Ale to już bardziej złożone zagadnienie.
+Możliwość podziału slajdu na dwie kolumny umożliwia kontener `columns`. Jego użycie zilustrowano we wzorcu, więc można go zacząć stosować "na wzór i podobieństwo". Kontener ten jest zrealizowany jako wstawka HTML elementu `grid`. Szczegółowy opis opcji jakie można stosować do wyrównania elementów w poziomie i pionie (przykłady użycia we wzorcu) przedstawiono w dokumencie [Chris House "A Complete Guide to CSS Grid"](https://css-tricks.com/snippets/css/complete-guide-grid/). Na podstawie zamieszczonego tam opisu bardzo łatwo stworzyć wzorce podziału obszaru slajdu na więcej logicznych elementów. Ale to już bardziej złożone zagadnienie.
 
 ###
 ###
