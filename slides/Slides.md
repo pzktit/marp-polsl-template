@@ -7,18 +7,18 @@ paginate: true
 backgroundImage: url("img/normal-page-background.png") 
 transition: fade
 footer: "**Marp + VS Code**"
-
 ---
 <style>
-footer {
+  footer {
   all: unset;
   margin: 0;
   position: absolute;
-  left: 550px; 
-  bottom: 21px;
+  left: 520px; 
+  bottom: 24px;
   color: var(--emph-color) ;
 }
 </style>
+
 <!-- _class: titlepage -->
 <!-- _backgroundImage: url("img/title-page-background.png") -->
 <!-- _paginate: false -->
@@ -204,7 +204,7 @@ Skład prezentacji jest kontrolowany przez plik `slides/themes/polsl.css`.
 
 ### Tekst
 
-Skład slajdu może jedno i dwukolumnowy. Więcej kolumn łatwo uzyskać, wprowadzając nowe klasy. Jednak celem tego szablonu jest zapewnienie maksymalnej prostoty edycji.
+Skład slajdu może być jedno i dwukolumnowy. Więcej kolumn łatwo uzyskać, wprowadzając nowe klasy. Jednak celem tego szablonu jest zapewnienie maksymalnej prostoty edycji.
 
 <div class="columns">
 <div>
@@ -263,14 +263,17 @@ Fragment pliku `Slides.md`
 
 ```
 ```py
-num1 = 1.5
-num2 = 6.3
+# This is a Python script to calculate the factorial of a number
 
-# Add two numbers
-sum = num1 + num2
+def factorial(n):
+    """This function calculates the factorial of a number"""
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
 
-# Display the sum
-print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+num = 5
+print("Factorial of", num, "is", factorial(num))
 #``` znaku komentarza nie powinno tu być
 ```
 
@@ -279,14 +282,17 @@ print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
 
 Uzyskany wynik składu
 ```py
-num1 = 1.5
-num2 = 6.3
+# This is a Python script to calculate the factorial of a number
 
-# Add two numbers
-sum = num1 + num2
+def factorial(n):
+    """This function calculates the factorial of a number"""
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
 
-# Display the sum
-print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+num = 5
+print("Factorial of", num, "is", factorial(num))
 ```
 
 </div>
@@ -333,11 +339,28 @@ print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
 
 ### Tabele
 
-- Tabele są zawsze wycentrowane i mogą zawierać wyrażenia matematyczne
+- Tabele są zawsze wycentrowane (względem slajdu lub kolumny) i mogą zawierać wyrażenia matematyczne
 - Do umieszczania podpisów można wykorzystać makro `figcaption`
 
+<div class="columns">
+<div>
+
+```md
 | Column A | Column B | Column C | Column D |
-| -------- | -------- | -------- | :------: |
+| -------- | ------:  | :------- | :------: |
+| A1       | B1       | C1       |    D1    |
+| A2       | B2       | C2       |    D2    |
+| A3       | B3       | C3       |    $y=\frac{2}{\pi}$    |
+<figcaption style="font-size: 80%; text-align: center">
+Tabela 1. Przykład podpisu pod rysunkiem lub tabelą.
+</figcaption>
+```
+
+</div>
+<div>
+
+| Column A | Column B | Column C | Column D |
+| -------- | ------:  | :------- | :------: |
 | A1       | B1       | C1       |    D1    |
 | A2       | B2       | C2       |    D2    |
 | A3       | B3       | C3       |    D3    |
@@ -345,6 +368,10 @@ print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
 <figcaption style="font-size: 80%; text-align: center">
 Tabela 1. Przykład podpisu pod rysunkiem lub tabelą.
 </figcaption>
+
+</div>
+</div>
+
 
 ####
 ---
@@ -363,7 +390,9 @@ Możliwość podziału slajdu na dwie kolumny umożliwia kontener `columns`. Jeg
 ###
 ---
 
-##### Podczas eksportu do pliku HTML lokalne pliki graficzne nie są kopiowane. Należy je przenieść osobno i umieścić w odpowiednim podkatalogu względem pliku prezentacji. Podobny problem ma miejsce podczas prezentacji na systemie bez dostępu do sieci!
+##### Podczas eksportu do pliku HTML lokalne pliki graficzne nie są kopiowane. Należy je przenieść osobno i umieścić w odpowiednim podkatalogu względem pliku prezentacji. Podobny problem ma miejsce podczas prezentacji HTML na systemie bez dostępu do sieci! 
+
+##### Format PDF jest samowystarczalny.
 
 #
 
