@@ -11,13 +11,12 @@ footer: "**Marp + VS Code**"
 <style>
   footer {
   all: unset;
-  margin: 0;
   position: absolute;
   left: 520px; 
   bottom: 24px;
-  color: var(--emph-color) ;
+  color: var(--base-color) ;
 }
-</style>
+</style> 
 
 <!-- _class: titlepage -->
 <!-- _backgroundImage: url("img/title-page-background.png") -->
@@ -46,7 +45,6 @@ footer: "**Marp + VS Code**"
 ## Niezbędne oprogramowanie
 
 ###
-
 
 <div class="columns">
 <div>
@@ -77,7 +75,6 @@ footer: "**Marp + VS Code**"
 
 ###
 
-
 ---
 
 ## Szablon
@@ -95,7 +92,6 @@ Przedstawiony szablon stara się być zgodny z zaleceniami ["Systemu Identyfikac
 - Otwórz [https://vscode.dev](https://vscode.dev) lub ...
 - Sklonuj repozytorium do lokalnego folderu i uruchom w nim VS Code. Jeżeli nie chcesz instalować zalecanego rozszerzenia otwórz DevContainer.
 
-
 </div><div>
 
 - Wyedytuj plik `slides/Slides.md`. **Nie zmieniaj jego nazwy**
@@ -106,7 +102,6 @@ Przedstawiony szablon stara się być zgodny z zaleceniami ["Systemu Identyfikac
 </div>
 
 ###
-
 
 ###
 
@@ -161,12 +156,13 @@ blah blah blah
 
 ##### Sposób składu znaczników podziału na sekcje definiuje styl.
 
-
 ### Podział na sekcje
+
 <div class="columns">
 <div>
 
 Strona tytułowa:
+
 ```
 # Tytuł
 ## Podtytuł
@@ -178,6 +174,7 @@ Strona tytułowa:
 </div><div>
 
 Ciało dokumentu:
+
 ```
 # Część
 ## Tytuł slajdu
@@ -191,15 +188,14 @@ Ciało dokumentu:
 
 ### Szablon można łatwo dostosować
 
-
 Skład prezentacji jest kontrolowany przez plik `slides/themes/polsl.css`.
 
 ###
 
 ###
 
-
 ---
+
 ## Zawartość slajdu
 
 ### Tekst
@@ -210,12 +206,14 @@ Skład slajdu może być jedno i dwukolumnowy. Więcej kolumn łatwo uzyskać, w
 <div>
 
 #### Wyliczanka 
+
 To jest zwykły tekst po prostu wystarczy pisać $2\pi r = \sqrt{3 x^3}$ i pisać i pisać.
 - jeden
 - dwa
 - trzy
 
-</div><div>
+</div>
+<div>
 
 #### Lista numerowana
 To jest zwykły tekst po prostu wystarczy pisać.
@@ -254,7 +252,6 @@ Jak widać efekt jest całkiem zadowalający. Pionowe wyrównanie tekstu najłat
 ### Kod komputerowy
 
 Obowiązują reguły dokładnie takie same jak dla języka Markdown. Dla większości języków programowania wspierane jest kolorowanie składni. Kolory przypisane do elementów logicznych są kontrolowane w pliku CSS stylu. Aby umieścić kod języka `Python` należy zastosować następującą konstrukcję
-
 
 <div class="columns">
 <div>
@@ -302,7 +299,6 @@ print("Factorial of", num, "is", factorial(num))
 
 ###
 
-
 ---
 
 ## Zawartość slajdu
@@ -310,7 +306,6 @@ print("Factorial of", num, "is", factorial(num))
 ###
 
 ### Slajd może również zawierać grafikę
-
 
 <div class="columns">
 <div>
@@ -330,7 +325,6 @@ print("Factorial of", num, "is", factorial(num))
 
 </div>
 </div>
-
 
 ---
 
@@ -374,6 +368,7 @@ Tabela 1. Przykład podpisu pod rysunkiem lub tabelą.
 
 
 ####
+
 ---
 
 ## Skład w wielu kolumnach
@@ -398,3 +393,22 @@ Możliwość podziału slajdu na dwie kolumny umożliwia kontener `columns`. Jeg
 
 # Powodzenia!
 
+---
+
+## P.S.:
+
+##### Nie wiem jak ustawić `section footer` w pliku `polsl.css`, aby stopka była wycentrowana. 
+Można by wtedy uniknąć wpisu
+
+```html
+<style>
+  footer {
+  all: unset;
+  position: absolute;
+  left: 520px; 
+  bottom: 24px;
+  color: var(--base-color) ;
+}
+</style> 
+```
+na początku prezentacji.
