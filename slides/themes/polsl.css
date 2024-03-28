@@ -2,6 +2,7 @@
 @theme polsl 
 */
 
+/* @import "default"; */
 @import "default";
 
 @import url('https://fonts.cdnfonts.com/css/lora-4');
@@ -15,6 +16,7 @@
   --head-color: #19559b ;
   --emph-color: #f6b701 ;
   --alert-color: #d80a1e ;
+  --code-background: rgb(182, 183, 185) ;
   --overlay: rgb(109, 180, 220) ;
   --normal-text-weight: 400 ; /* depends on loaded font */
   --bold-text-weight: 700 ;
@@ -53,11 +55,29 @@ h2 {
   border-bottom: 2px solid var(--emph-color) ; 
 }
 
+code {
+  /* color: var(--base-color) ; */
+  background-color: var(--code-background) ;
+}
+
+marp-pre {
+  font-size: 60% ;
+  /* color: var(--text-color) ;  */
+  background-color: var(--code-background) ;
+}
+
 h1 {
   font-size: 200% ;
   color: var(--emph-color) ;
   text-align: center;
 }
+
+section footer {
+  /* left: auto ;  */
+  /* right: auto ;  */
+  /* font-size: 1em ; */
+  /* color: var(--emph-color) ; */
+} 
 
 section::after {
   color: var(--base-color);
@@ -115,11 +135,8 @@ section.titlepage h3 {
   /* border-bottom: 1px solid var(--emph-color) ;    */
 }
 
-marp-pre {
-  font-size: 60% ;
-  color: var(--base-color) ;
-  background-color: var(--text-color);
-}
+
+/* 
 
 .hljs-string {
   color: #be00be;
@@ -162,7 +179,7 @@ marp-pre {
 }
 .hljs-meta {
   color: var(--base-color);
-} 
+}  */
 
 section table {
   margin-right: auto;
