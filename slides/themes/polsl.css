@@ -73,11 +73,13 @@ h1 {
 }
 
 section footer {
-  /* left: auto ;  */
-  /* right: auto ;  */
-  /* font-size: 1em ; */
-  /* color: var(--emph-color) ; */
-} 
+  color: var(--base-color) ;
+  left: 420px ;
+  width: 480px ;
+  text-align: center;
+  font-size: 100% ;
+  background-color: rgba(10,10,10,0);
+}
 
 section::after {
   color: var(--base-color);

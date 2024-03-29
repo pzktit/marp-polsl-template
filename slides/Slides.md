@@ -8,16 +8,6 @@ backgroundImage: url("img/normal-page-background.png")
 transition: fade
 footer: "**Marp + VS Code**"
 ---
-<style>
-  footer {
-  all: unset;
-  position: absolute;
-  left: 520px; 
-  bottom: 24px;
-  color: var(--base-color) ;
-}
-</style> 
-
 <!-- _class: titlepage -->
 <!-- _backgroundImage: url("img/title-page-background.png") -->
 <!-- _paginate: false -->
@@ -75,6 +65,7 @@ footer: "**Marp + VS Code**"
 
 ###
 
+
 ---
 
 ## Szablon
@@ -104,6 +95,16 @@ Przedstawiony szablon stara się być zgodny z zaleceniami ["Systemu Identyfikac
 ###
 
 ###
+
+<!--
+
+Notatki prowadzącego
+
+* wyjaśnić co to jest `vscode.dev`
+* objaśnić GH pages i co to znaczy, że mają być ustawione GH Actions,
+* wspomnieć o restrykcjach wprowadzynch przez GH na runnery, najlepiej wyświetlić działającą konfiguracje ze swojego konta 
+
+-->
 
 ---
 
@@ -251,7 +252,7 @@ Jak widać efekt jest całkiem zadowalający. Pionowe wyrównanie tekstu najłat
 
 ### Kod komputerowy
 
-Obowiązują reguły dokładnie takie same jak dla języka Markdown. Dla większości języków programowania wspierane jest kolorowanie składni. Kolory przypisane do elementów logicznych są kontrolowane w pliku CSS stylu. Aby umieścić kod języka `Python` należy zastosować następującą konstrukcję
+Obowiązują reguły dokładnie takie same jak dla języka Markdown. Dla większości języków programowania wspierane jest kolorowanie składni. Kolory przypisane do elementów logicznych są kontrolowane w pliku CSS stylu. Aby umieścić kod języka `Python`, należy zastosować następującą konstrukcję
 
 <div class="columns">
 <div>
@@ -392,23 +393,3 @@ Możliwość podziału slajdu na dwie kolumny umożliwia kontener `columns`. Jeg
 #
 
 # Powodzenia!
-
----
-
-## P.S.:
-
-##### Nie wiem jak ustawić `section footer` w pliku `polsl.css`, aby stopka była wycentrowana. 
-Można by wtedy uniknąć wpisu
-
-```html
-<style>
-  footer {
-  all: unset;
-  position: absolute;
-  left: 520px; 
-  bottom: 24px;
-  color: var(--base-color) ;
-}
-</style> 
-```
-na początku prezentacji.
