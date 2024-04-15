@@ -72,6 +72,15 @@ h1 {
   text-align: center;
 }
 
+
+img { /* make transparent background really transparent, not white */
+  background-color: transparent!important;
+}
+
+section {
+  padding-bottom: 14%;
+}
+
 section footer {
   color: var(--base-color) ;
   left: 420px ;

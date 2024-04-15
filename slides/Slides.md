@@ -28,10 +28,9 @@ footer: "**Marp + VS Code**"
 
 ### Piotr Zawadzki
 
-### 24.03.2024 
+### 15.04.2024 
 
 ---
-
 ## Niezbędne oprogramowanie
 
 ###
@@ -61,13 +60,7 @@ footer: "**Marp + VS Code**"
 </div>
 </div>
 
-###
-
-###
-
-
 ---
-
 ## Szablon
 
 Przedstawiony szablon stara się być zgodny z zaleceniami ["Systemu Identyfikacji Wizualnej Politechniki Śląskiej"](https://www.polsl.pl/siwps/).
@@ -92,9 +85,6 @@ Przedstawiony szablon stara się być zgodny z zaleceniami ["Systemu Identyfikac
 </div>
 </div>
 
-###
-
-###
 
 <!--
 
@@ -107,7 +97,6 @@ Notatki prowadzącego
 -->
 
 ---
-
 ## Plik wejściowy
 
 Plik wejściowy to niemal "zwykły" Markdown. Jedyna różnica polega na wprowadzeniu znaku podziału slajdów w postaci trzech znaków minus (dash): `---`. 
@@ -152,7 +141,6 @@ blah blah blah
 </div>
 
 ---
-
 ## Struktura dokumentu
 
 ##### Sposób składu znaczników podziału na sekcje definiuje styl.
@@ -191,13 +179,10 @@ Ciało dokumentu:
 
 Skład prezentacji jest kontrolowany przez plik `slides/themes/polsl.css`.
 
-###
-
-###
-
 ---
-
 ## Zawartość slajdu
+
+#
 
 ### Tekst
 
@@ -226,10 +211,9 @@ To jest zwykły tekst po prostu wystarczy pisać.
 </div>
 
 ---
-
 ## Zawartość slajdu
 
-###
+#
 
 ### Wyrażenia matematyczne
 
@@ -240,15 +224,9 @@ $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi\qquad\qquad
 
 Jak widać efekt jest całkiem zadowalający. Pionowe wyrównanie tekstu najłatwiej osiągnąć wstawiając puste nagłówki w pożądanych miejscach.
 
-###
-
-###
-
-###
-
 ---
-
 ## Zawartość slajdu
+
 
 ### Kod komputerowy
 
@@ -296,9 +274,6 @@ print("Factorial of", num, "is", factorial(num))
 </div>
 </div>
 
-###
-
-###
 
 ---
 
@@ -328,7 +303,6 @@ print("Factorial of", num, "is", factorial(num))
 </div>
 
 ---
-
 ## Zawartość slajdu
 
 
@@ -367,11 +341,7 @@ Tabela 1. Przykład podpisu pod rysunkiem lub tabelą.
 </div>
 </div>
 
-
-####
-
 ---
-
 ## Skład w wielu kolumnach
 
 ###
@@ -380,10 +350,6 @@ Tabela 1. Przykład podpisu pod rysunkiem lub tabelą.
 
 Możliwość podziału slajdu na dwie kolumny umożliwia kontener `columns`. Jego użycie zilustrowano we wzorcu, więc można go zacząć stosować "na wzór i podobieństwo". Kontener ten jest zrealizowany jako wstawka HTML elementu `grid`. Szczegółowy opis opcji jakie można stosować do wyrównania elementów w poziomie i pionie (przykłady użycia we wzorcu) przedstawiono w dokumencie [Chris House "A Complete Guide to CSS Grid"](https://css-tricks.com/snippets/css/complete-guide-grid/). Na podstawie zamieszczonego tam opisu bardzo łatwo stworzyć wzorce podziału obszaru slajdu na więcej logicznych elementów. Ale to już bardziej złożone zagadnienie.
 
-###
-###
-###
-###
 ---
 
 ##### Podczas eksportu do pliku HTML lokalne pliki graficzne nie są kopiowane. Należy je przenieść osobno i umieścić w odpowiednim podkatalogu względem pliku prezentacji. Podobny problem ma miejsce podczas prezentacji HTML na systemie bez dostępu do sieci! 
